@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.todoKarte{
+    margin: 100px auto;
+
+
+    height: 300px;
+    width: 250px;
+    background-color: gainsboro;
+}
+
+.addTask-container{
+    background-color: gray;
+
+    display: flex;
+    padding: .5rem;
+}
+
+.addTask-btn{
+    height: 24px;
+    width: 24px;
+    background-color: white;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todos{
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+}
+
+
+.taskCompleted-btn{
+    height: 24px;
+    width: 24px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.divider-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divider{
+    height: 2px;
+    width: 90%;
+
+    border-top: 3px dotted gray;
+}
