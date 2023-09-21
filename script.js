@@ -11,8 +11,11 @@
         }
         
         $(".todos-container").append('<div class="todos"><div class="taskCompleted-btn"></div><div class="task"><p>'+ inputText +'</p></div></div>');
+       
+    });
 
-        //console.log(inputText);
+    $(".taskCompleted-btn").on("click", function(){
+        $(".todos p")
     });
 
 
