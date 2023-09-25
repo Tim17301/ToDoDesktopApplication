@@ -62,9 +62,7 @@
     $(".todos-container").on("mouseleave", ".todos", function(){
         $(this).find(".positionUNDdelete-container").addClass("hidden");
     });
-
-
-    //
+    
     
     
 
