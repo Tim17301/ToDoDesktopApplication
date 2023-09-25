@@ -17,16 +17,30 @@
 
     <div class="todoKarte">
         <div class="weekday">
-            <h1>Sunday</h1>
+            <h1>SUNDAY</h1>
         </div>
 
         <div class="addTask-container">
             <div class="addTask-btn"><i class='bx bx-plus-medical'></i></div>
-            <input type="text">
+            <form action="">
+               <input type="text" maxlength="100" placeholder="Add a ToDo"> 
+            </form>
         </div>
 
         <div class="todos-container">
-            <div class="todos"><div class="taskCompleted-btn"></div><div class="task"><p>Aufgabe 1</p></div></div>
+            <div class="todos">
+                <div class="taskCompleted-btn">
+                    <div class="taskCompleted-circle hidden"></div>
+                </div>
+                <div class="task"><p>Aufgabe 1</p></div>
+                <div class="positionUNDdelete-container hidden">
+                    <div class="delete-container"><i class='bx bx-trash'></i></div>
+                    <div class="position-container">
+                        <i class='bx bx-chevron-up' ></i>
+                        <i class='bx bx-chevron-down' ></i>
+                    </div>
+                </div>
+            </div>
         </div>
         
     </div>
