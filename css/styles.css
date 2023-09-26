@@ -8,7 +8,7 @@ body{
     max-width: 856px;
     display: grid;
     grid-template-columns: 252px 252px 252px;
-    grid-template-rows: 302px 302px 302px;
+    grid-template-rows: 302px 302px 302px 302px;
     gap: 50px;
 }
 
@@ -194,4 +194,23 @@ body{
 
 .textfeld textarea::-webkit-scrollbar-thumb{
     background-color: black;
+}
+
+/*=========PRIORITIES========*/
+.priorities{
+    width: 856px;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    border-top: 1px black solid;
+    border-bottom: 1px black solid;
+}
+
+.priorities-inputs{
+    width: 100%;
+    height: 264px;
+}
+
+.priorities-inputs input{
+    height: 52.8px;
+    width: 100%;
 }
