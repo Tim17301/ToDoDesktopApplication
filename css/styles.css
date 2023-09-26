@@ -165,3 +165,33 @@ body{
     display: block;
 }
 
+/*=========NOTES========*/
+.notes-textfeld{
+    height: 300px;
+    width: 552px;
+    border: 1px black solid;
+}
+
+.notes-headline{
+    border-bottom: 1px black solid;
+}
+
+.textfeld{
+    width: 100%;
+}
+
+.textfeld textarea{
+    resize: none;
+    width: 100%;
+    height: 264px;
+    outline: none;
+    border: none;
+}
+
+.textfeld textarea::-webkit-scrollbar{
+    width: 5px;
+}
+
+.textfeld textarea::-webkit-scrollbar-thumb{
+    background-color: black;
+}
