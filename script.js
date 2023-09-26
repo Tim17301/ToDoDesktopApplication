@@ -1,38 +1,113 @@
 (function(){
     "use strict";
 
-    
-    $(".addTask-btn").on("click", function(){
-        addToDo();
-        deleteDivider();
-    });
+    //Event Listener für das hinzufügen von Todos
+        //Sunday
+        $(".sunday .addTask-btn").on("click", function(){
+            addToDo(".sunday");
+            deleteDividerAdd();
+        });
 
-    $(".addTask-container form").on("submit", function(event){
-        event.preventDefault();
-        addToDo();
-        deleteDivider();
-    });
+        $(".sunday .addTask-container form").on("submit", function(event){
+            event.preventDefault();
+            addToDo(".sunday");
+            deleteDividerAdd();
+        });
+        //Monday
+        $(".monday .addTask-btn").on("click", function(){
+            addToDo(".monday");
+            deleteDividerAdd();
+        });
+
+        $(".monday .addTask-container form").on("submit", function(event){
+            event.preventDefault();
+            addToDo(".monday");
+            deleteDividerAdd();
+        });
+        //Tuesday
+        $(".tuesday .addTask-btn").on("click", function(){
+            addToDo(".tuesday");
+            deleteDividerAdd();
+        });
+
+        $(".tuesday .addTask-container form").on("submit", function(event){
+            event.preventDefault();
+            addToDo(".tuesday");
+            deleteDividerAdd();
+        });
+        //Wednesday
+        $(".wednesday .addTask-btn").on("click", function(){
+            addToDo(".wednesday");
+            deleteDividerAdd();
+        });
+
+        $(".wednesday .addTask-container form").on("submit", function(event){
+            event.preventDefault();
+            addToDo(".wednesday");
+            deleteDividerAdd();
+        });
+        //Thursday
+        $(".thursday .addTask-btn").on("click", function(){
+            addToDo(".thursday");
+            deleteDividerAdd();
+        });
+
+        $(".thursday .addTask-container form").on("submit", function(event){
+            event.preventDefault();
+            addToDo(".thursday");
+            deleteDividerAdd();
+        });
+        //Friday
+        $(".friday .addTask-btn").on("click", function(){
+            addToDo(".friday");
+            deleteDividerAdd();
+        });
+
+        $(".friday .addTask-container form").on("submit", function(event){
+            event.preventDefault();
+            addToDo(".friday");
+            deleteDividerAdd();
+        });
+        //Saturday
+        $(".saturday .addTask-btn").on("click", function(){
+            addToDo(".saturday");
+            deleteDividerAdd();
+        });
+
+        $(".saturday .addTask-container form").on("submit", function(event){
+            event.preventDefault();
+            addToDo(".saturday");
+            deleteDividerAdd();
+        });
 
     //To Do hinzufügen
-    function addToDo(){
-        var inputText = $(".addTask-container input").val();
+    function addToDo(weekday){
+        var inputText = $(weekday + " input").val();
         if (inputText != 0){
-            var countChildren = $(".todos-container").children().length;
+            var countChildren = $(weekday + " .todos-container").children().length;
             if (countChildren != 0){
-                $(".todos-container").append('<div class="divider-container"><div class="divider"></div></div>');
+                $(weekday + " .todos-container").append('<div class="divider-container"><div class="divider"></div></div>');
             }
-           $(".todos-container").append('<div class="todos"><div class="taskCompleted-btn"><div class="taskCompleted-circle hidden"></div></div><div class="task"><p>'+ inputText +'</p></div><div class="positionUNDdelete-container hidden"><div class="delete-container"><i class="bx bx-trash"></i></div><div class="position-container"><i class="bx bx-chevron-up" ></i><i class="bx bx-chevron-down" ></i></div></div></div>'); 
+           $(weekday + " .todos-container").append('<div class="todos"><div class="taskCompleted-btn"><div class="taskCompleted-circle hidden"></div></div><div class="task"><p>'+ inputText +'</p></div><div class="positionUNDdelete-container hidden"><div class="delete-container"><i class="bx bx-trash"></i></div><div class="position-container"><i class="bx bx-chevron-up" ></i><i class="bx bx-chevron-down" ></i></div></div></div>'); 
         }
-        $(".addTask-container input").val("");
+        $(weekday + " .addTask-container input").val("");
     }
 
-    //Falls erstes Element ein Divider ist, dann löschen
-    function deleteDivider(){
+
+
+
+    //Falls erstes Element ein Divider ist, dann löschen (beim hinzufügen von todos)
+    function deleteDividerAdd(){
         if($(".todos-container .divider-container").index() == 0){
             $(".todos-container .divider-container").remove();
         }
     }
-    
+    //Falls erstes Element ein Divider ist, dann löschen (beim löschen von Todos)
+    function deleteDividerDelete(){
+        if($(".todos-container .divider-container").index() == 0){
+            $(".todos-container .divider-container:first-child").remove();
+        }
+    }
 
    // To Do als erledigt markieren, wenn Text gedrückt wird
     $(".todos-container").on("click", ".task", function(){
@@ -68,8 +143,9 @@
 
     //To Do löschen, wenn man auf Abfalleimer-Icon drückt
     $(".todos-container").on("click",".delete-container", function(){
+        $(this).parents(".todos").prev().remove();
         $(this).parents(".todos").remove();
-        $(".todos-container .divider").last().remove();
+        deleteDividerDelete();
     });
 
     //To Do Position ändern, wenn man auf Pfeile drückt

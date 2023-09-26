@@ -3,10 +3,16 @@
     padding: 0;
 }
 
+body{
+    margin: 0 auto;
+    max-width: 856px;
+    display: grid;
+    grid-template-columns: 252px 252px 252px;
+    grid-template-rows: 302px 302px 302px;
+    gap: 50px;
+}
+
 .todoKarte{
-    margin: 100px auto;
-
-
     height: 300px;
     width: 250px;
     border: 1px black solid;
