@@ -167,7 +167,10 @@
             $(this).parents(".todos").next().next().insertBefore($(this).parents(".todos").next());
         });
     
-    
+    //Damit die Seite nicht neu lädt wenn man bei den Priorities ausversehen sumited
+    $(".priorities-inputs form").on("submit", function(event){
+        event.preventDefault();
+    });
     
 
 
